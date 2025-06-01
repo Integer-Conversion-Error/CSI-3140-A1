@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1: Layout Template</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        header {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            overflow: hidden; /* Clear floats */
+        }
+        .column {
+            float: left;
+            width: 48%; /* Adjust as needed, leaving some space for margin/padding */
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #e9e9e9;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        .column.left {
+            margin-right: 2%; /* Gutter between columns */
+        }
+        /* Clearfix for the container if paragraphs have different heights */
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Layout Template Header</h2>
+    </header>
+    <div class="container">
+        <div class="column left">
+            <h3>Paragraph 1</h3>
+            <p>This is the first paragraph. It is styled to appear as a column on the left side. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="column">
+            <h3>Paragraph 2</h3>
+            <p>This is the second paragraph. It is styled to appear as a column on the right side. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <p><a href="index.html">Back to Home</a></p>
+</body>
+</html>

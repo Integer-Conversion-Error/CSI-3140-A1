@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wikipedia Picks</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        .category-list { margin-bottom: 20px; }
+        .category-list > li { margin-bottom: 10px; }
+        .sub-topic-list li { margin-bottom: 5px; }
+        form {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        form input[type="submit"], form input[type="reset"] {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        form input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Wikipedia Picks</h1>
+
+    <ol class="category-list">
+        <li>
+            Programming Languages
+            <ul class="sub-topic-list">
+                <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a></li>
+            </ul>
+        </li>
+        <li>
+            Space Exploration
+            <ul class="sub-topic-list">
+                <li><a href="https://en.wikipedia.org/wiki/Mars_rover" target="_blank">Mars Rover</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/International_Space_Station" target="_blank">International Space Station</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Hubble_Space_Telescope" target="_blank">Hubble Space Telescope</a></li>
+            </ul>
+        </li>
+        <li>
+            Ancient Civilizations
+            <ul class="sub-topic-list">
+                <li><a href="https://en.wikipedia.org/wiki/Ancient_Egypt" target="_blank">Ancient Egypt</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Roman_Empire" target="_blank">Roman Empire</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Maya_civilization" target="_blank">Maya Civilization</a></li>
+            </ul>
+        </li>
+    </ol>
+
+    <form action="https://en.wikipedia.org/wiki/Special:Search" method="get" target="_blank">
+        <label for="searchInput">Search Wikipedia:</label>
+        <input type="text" id="searchInput" name="search" placeholder="Enter search term...">
+        <input type="submit" value="Search">
+        <input type="reset" value="Reset">
+    </form>
+
+    <p><a href="index.html">Back to Home</a></p>
+</body>
+</html>

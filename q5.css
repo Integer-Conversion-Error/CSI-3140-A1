@@ -1,0 +1,196 @@
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Primary font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light gray-green background */
+    color: #333; /* Dark gray text for contrast */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content area */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+/* Header Styles */
+header {
+    background: #35424a; /* Dark blue-gray */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: #77aaff 3px solid; /* Light blue accent */
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Georgia', serif; /* Secondary font for heading */
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation (if any - not explicitly required but good for semantic structure) */
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: #4a5c68; /* Slightly lighter dark blue-gray */
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #77aaff;
+    color: #35424a;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #eef2f1; /* Very light gray-green for sections */
+    border-left: 5px solid #77aaff; /* Accent border */
+    border-radius: 4px;
+}
+
+section h2 {
+    color: #35424a;
+    font-family: 'Georgia', serif;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+/* Skills List */
+.skills-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Contact Info */
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* "Show More" Button */
+.show-more-btn {
+    background-color: #5cb85c; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.show-more-btn:hover {
+    background-color: #4cae4c; /* Darker green */
+}
+
+/* Hidden Content for "Show More" */
+.more-details {
+    display: none; /* Initially hidden */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light background for expanded details */
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Recruiter Form */
+#recruiter-form {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f0f4f8; /* Light blue-ish background for form */
+    border-radius: 5px;
+}
+
+#recruiter-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#recruiter-form input[type="text"],
+#recruiter-form input[type="email"],
+#recruiter-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#recruiter-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#recruiter-form button[type="submit"] {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#recruiter-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Form Validation Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.back-link-q5 {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+.back-link-q5 a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
