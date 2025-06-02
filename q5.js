@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // "Show more" button functionality
     const showMoreBtn = document.getElementById('showMoreBtn');
     const moreDetails = document.getElementById('moreDetails');
 
@@ -15,22 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Recruiter form validation
     const recruiterForm = document.getElementById('recruiterForm');
     if (recruiterForm) {
         recruiterForm.addEventListener('submit', function(event) {
             let isValid = true;
-            // Clear previous error messages
             document.querySelectorAll('.error-message').forEach(el => el.remove());
 
-            // Validate Recruiter Name
             const recruiterName = document.getElementById('recruiterName');
             if (!recruiterName.value.trim()) {
                 displayError(recruiterName, 'Recruiter name is required.');
                 isValid = false;
             }
 
-            // Validate Recruiter Email
             const recruiterEmail = document.getElementById('recruiterEmail');
             if (!recruiterEmail.value.trim()) {
                 displayError(recruiterEmail, 'Email is required.');
@@ -40,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
 
-            // Validate Message
             const recruiterMessage = document.getElementById('recruiterMessage');
             if (!recruiterMessage.value.trim()) {
                 displayError(recruiterMessage, 'Message cannot be empty.');
@@ -48,13 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (!isValid) {
-                event.preventDefault(); // Prevent form submission if validation fails
+                event.preventDefault();
             } else {
-                // Optionally, you can handle form submission here (e.g., via AJAX)
-                // For this example, we'll just let it submit (or prevent if action="#" is used)
-                alert('Message submitted (simulated)!'); // Placeholder for actual submission
-                event.preventDefault(); // Prevent actual submission for this demo
-                recruiterForm.reset(); // Reset form after successful "submission"
+                alert('Message submitted (simulated)!');
+                event.preventDefault();
+                recruiterForm.reset();
             }
         });
     }
@@ -67,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function isValidEmail(email) {
-        // Basic email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
