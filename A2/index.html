@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Movie Wishlist</h1>
+        <p>Add, sort, and manage movies you want to watch</p>
+
+        <form id="add-movie-form">
+            <div class="form-group">
+                <label for="title-input">Title</label>
+                <input type="text" id="title-input" placeholder="e.g., Inception" required>
+            </div>
+            <div class="form-group">
+                <label for="genre-input">Genre</label>
+                <select id="genre-input" required>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Your Rating</label>
+                <div class="star-rating" id="add-star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-add">Add Movie</button>
+        </form>
+
+        <div class="controls">
+            <div class="sort-controls">
+                <span>Sort by:</span>
+                <button id="sort-by-title">Title</button>
+                <button id="sort-by-rating">Rating</button>
+            </div>
+            <div class="filter-controls">
+                <label for="filter-by-genre">Filter by Genre:</label>
+                <select id="filter-by-genre">
+                    <option value="All">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+            </div>
+        </div>
+
+        <h2>Your Wishlist</h2>
+        <div id="movie-list" class="movie-list">
+            <!-- Movie cards will be rendered here -->
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Movie</h2>
+            <form id="edit-movie-form">
+                <input type="hidden" id="edit-movie-id">
+                <div class="form-group">
+                    <label for="edit-title-input">Title</label>
+                    <input type="text" id="edit-title-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-genre-input">Genre</label>
+                    <select id="edit-genre-input" required>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="star-rating" id="edit-star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="btn-save">Save Changes</button>
+                    <button type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

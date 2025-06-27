@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #e50914;
+}
+
+p {
+    color: #aaaaaa;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.btn-add, .btn-save, .btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-add {
+    background-color: #e50914;
+    color: #fff;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sort-controls button, .filter-controls select {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.movie-card.watched {
+    background-color: #444;
+    opacity: 0.7;
+}
+
+.movie-card h3 {
+    margin-top: 0;
+}
+
+.movie-card .genre {
+    background-color: #e50914;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.movie-card .card-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card-buttons button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.star-rating {
+    display: flex;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    font-size: 24px;
+    color: #555;
+}
+
+.star-rating .star.selected,
+.star-rating .star.hover {
+    color: #f5c518;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    color: #fff;
+    margin-left: 10px;
+}
