@@ -1,4 +1,4 @@
-# Answers to Questions
+# Answers to Questions (while trying my hand at writing in Markdown)
 
 ## Q1) What is the output of the following script? (3 marks)
 ```javascript
