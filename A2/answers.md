@@ -1,4 +1,5 @@
 # Answers to Questions (while trying my hand at writing in Markdown)
+# Esad Kaya 300283659
 
 ## Q1) What is the output of the following script? (3 marks)
 ```javascript
@@ -33,7 +34,7 @@ a. The `Math.PI` property represents the mathematical constant π.
     **True**
 
 b. The `localStorage` object can store any JavaScript data type, including objects and arrays, without any conversion.
-    **False**. `localStorage` can only store strings. Objects and arrays must be converted to JSON strings (e.g., using `JSON.stringify()`) before being stored, and parsed back (e.g., using `JSON.parse()`) when retrieved.
+    **False**. `localStorage` only stores strings. Objects and arrays must be converted to JSON strings (e.g., using `JSON.stringify()`) before being stored, and parsed back (e.g., using `JSON.parse()`) when retrieved.
 
 c. The `String` method `charAt(0)` returns the first character of a string.
     **True**
