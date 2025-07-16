@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lib:library xmlns:lib="http://localhost/library">
+    <lib:book>
+        <lib:title>The Hitchhiker's Guide to the Galaxy</lib:title>
+        <lib:author>Douglas Adams</lib:author>
+        <lib:genre>Sci-Fi</lib:genre>
+        <lib:year>1979</lib:year>
+        <lib:user>dorsa</lib:user>
+    </lib:book>
+    <lib:book>
+        <lib:title>Pride and Prejudice</lib:title>
+        <lib:author>Jane Austen</lib:author>
+        <lib:genre>Fiction</lib:genre>
+        <lib:year>1813</lib:year>
+        <lib:user>dorsa</lib:user>
+    </lib:book>
+    <lib:book>
+        <lib:title>To Kill a Mockingbird</lib:title>
+        <lib:author>Harper Lee</lib:author>
+        <lib:genre>Fiction</lib:genre>
+        <lib:year>1960</lib:year>
+        <lib:user>testuser</lib:user>
+    </lib:book>
+    <lib:book>
+        <lib:title>The Great Gatsby</lib:title>
+        <lib:author>F. Scott Fitzgerald</lib:author>
+        <lib:genre>Fiction</lib:genre>
+        <lib:year>1925</lib:year>
+        <lib:user>testuser</lib:user>
+    </lib:book>
+    <lib:book>
+        <lib:title>Moby Dick</lib:title>
+        <lib:author>Herman Melville</lib:author>
+        <lib:genre>Fiction</lib:genre>
+        <lib:year>1851</lib:year>
+        <lib:user>anotheruser</lib:user>
+    </lib:book>
+</lib:library>

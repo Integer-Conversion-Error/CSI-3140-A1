@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Lookup</title>
+    <style>
+        body { font-family: sans-serif; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .search-bar, .add-book-form { margin-bottom: 20px; }
+        .results div { border-bottom: 1px solid #ccc; padding: 10px 0; }
+        .results button { margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Lookup</h1>
+
+        <div class="search-bar">
+            <h2>Search</h2>
+            <input type="text" id="search-input" placeholder="Search by title or author">
+            <select id="genre-filter">
+                <option value="all">All Genres</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="History">History</option>
+                <option value="Dystopian">Dystopian</option>
+            </select>
+            <select id="user-filter">
+                <option value="all">All Users</option>
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="add-book-form">
+            <h2>Add a New Book</h2>
+            <form id="add-book-form">
+                <input type="text" name="title" placeholder="Title" required>
+                <input type="text" name="author" placeholder="Author" required>
+                <select name="genre" required>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="History">History</option>
+                    <option value="Dystopian">Dystopian</option>
+                </select>
+                <input type="number" name="year" placeholder="Year" required>
+                <select name="user_id" id="add-book-user" required>
+                    <option value="">Select a user</option>
+                </select>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="results">
+            <h2>Results</h2>
+            <div id="results-container"></div>
+            <p id="no-results-message" style="display: none;">No books found.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
