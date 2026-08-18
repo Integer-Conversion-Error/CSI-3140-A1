@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBookForm = document.getElementById('add-book-form');
     const userSelects = [document.getElementById('user-filter'), document.getElementById('add-book-user')];
 
-    // Fetch users and populate dropdowns
     function fetchUsers() {
         fetch('get-users.php')
             .then(response => response.json())
             .then(users => {
                 const addUserSelect = document.getElementById('add-book-user');
-                // Clear existing options except the first one
                 userFilter.innerHTML = '<option value="all">All Users</option>';
                 addUserSelect.innerHTML = '<option value="">Select a user</option>';
 
@@ -32,9 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Render books
     function renderBooks(books) {
-        resultsContainer.innerHTML = ''; // Clear previous results
+        resultsContainer.innerHTML = '';
         if (books.length === 0) {
             noResultsMessage.style.display = 'block';
         } else {
@@ -65,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Search for books
     function searchBooks() {
         const query = searchInput.value;
         const genre = genreFilter.value;
@@ -76,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(books => renderBooks(books));
     }
 
-    // Add a new book
     addBookForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const formData = new FormData(addBookForm);
@@ -88,12 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             if (data.success) {
                 addBookForm.reset();
-                searchBooks(); // Refresh the list
+                searchBooks();
             }
         });
     });
 
-    // Delete a book
     function deleteBook(id) {
         const formData = new FormData();
         formData.append('id', id);
@@ -105,15 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                searchBooks(); // Refresh the list
+                searchBooks();
             }
         });
     }
 
-    // Event Listeners
     searchBtn.addEventListener('click', searchBooks);
 
-    // Initial load
     fetchUsers();
     searchBooks();
 });
